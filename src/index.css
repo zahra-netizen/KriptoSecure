@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Source Code Pro', monospace;
+    --font-body: 'IBM Plex Sans', sans-serif;
+
+    --background: 214 80% 11%;
+    --foreground: 220 30% 88%;
+
+    --card: 214 70% 14%;
+    --card-foreground: 220 30% 88%;
+
+    --popover: 214 70% 14%;
+    --popover-foreground: 220 30% 88%;
+
+    --primary: 166 100% 70%;
+    --primary-foreground: 214 80% 11%;
+
+    --secondary: 214 60% 20%;
+    --secondary-foreground: 220 30% 88%;
+
+    --muted: 214 50% 18%;
+    --muted-foreground: 220 20% 55%;
+
+    --accent: 40 92% 49%;
+    --accent-foreground: 214 80% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 40% 22%;
+    --input: 214 40% 22%;
+    --ring: 166 100% 70%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 214 70% 14%;
+    --sidebar-foreground: 220 30% 88%;
+    --sidebar-primary: 166 100% 70%;
+    --sidebar-primary-foreground: 214 80% 11%;
+    --sidebar-accent: 214 60% 20%;
+    --sidebar-accent-foreground: 220 30% 88%;
+    --sidebar-border: 214 40% 22%;
+    --sidebar-ring: 166 100% 70%;
+
+    --trace-glow: 166 100% 70%;
+
+    --success: 145 63% 42%;
+    --success-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6, label, [data-heading] {
+    font-family: var(--font-heading);
+  }
+
+  code, pre, [data-mono] {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .trace-glow {
+    box-shadow: 0 0 20px hsl(var(--trace-glow) / 0.15), 
+                0 0 40px hsl(var(--trace-glow) / 0.08),
+                inset 0 1px 0 hsl(var(--trace-glow) / 0.1);
+    border-color: hsl(var(--primary));
+  }
+
+  .glassmorphism {
+    background: hsl(var(--card) / 0.6);
+    backdrop-filter: blur(12px);
+  }
+
+  .download-glow {
+    box-shadow: 0 0 16px hsl(var(--accent) / 0.2),
+                0 0 32px hsl(var(--accent) / 0.08);
+  }
+}
