@@ -680,7 +680,7 @@ const CoreFunction = ({ keys }: CoreFunctionProps) => {
                     className="rounded-lg border border-border bg-card p-6 md:p-8"
                 >
                     <h2 className="font-heading text-lg font-semibold text-foreground mb-6">
-                        {mode === "encrypt" ? "Enkripsi" : "Dekripsi"}
+                        {mode === "encrypt" ? "Enkripsi dan Dekripsi" : "Dekripsi"}
                     </h2>
 
                     {/* Mode Toggle */}
