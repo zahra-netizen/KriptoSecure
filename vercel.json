@@ -4,9 +4,16 @@
   "outputDirectory": "dist",
   "devCommand": "bun run dev",
   "cleanUrls": true,
+  "github": {
+    "silent": true
+  },
   "rewrites": [
     {
-      "source": "/((?!_next/static|_next/image|favicon.ico).*)",
+      "source": "/assets/(.*)",
+      "destination": "/assets/$1"
+    },
+    {
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
