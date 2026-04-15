@@ -1,0 +1,13 @@
+{
+  "buildCommand": "bun run build",
+  "installCommand": "bun install",
+  "outputDirectory": "dist",
+  "devCommand": "bun run dev",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/((?!_next/static|_next/image|favicon.ico).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
